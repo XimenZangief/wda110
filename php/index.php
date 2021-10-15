@@ -19,5 +19,7 @@ for($i=1;$i<=$row;$i++){
         echo "*";
     echo "<br>";
 }
-    
+$row=5;
+if($row%2 == 0)
+    $row=$row+1;
 ?>
