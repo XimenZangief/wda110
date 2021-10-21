@@ -8,14 +8,14 @@
     <title>Document</title>
     <style>
         body {
-            text-align: center;
-            background-image: url('./images/0101.jpg');
+            background: url('./images/0101.jpg');
+            font-family: '標楷體';
         }
 
         header {
             font-size: 18px;
-            font-family: '標楷體';
             color: #FF0000;
+            text-align: center;
         }
 
         nav {
@@ -23,12 +23,19 @@
             justify-content: space-around;
         }
 
+        nav.goto {
+            margin: 10px;
+        }
+
         section {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             font-size: 16px;
-            font-family: '標楷體';
-            text-align: left;
+        }
+
+        section>p {
+            flex-basis: 100%;
+            color: #800000;
         }
 
         section>div {
@@ -37,25 +44,22 @@
 
         section>a {
             flex-basis: 20%;
+            align-self: center;
         }
 
-        section>header {
-            color: #800000;
-        }
-
-        section>div:nth-child(1) {
+        section>div:nth-of-type(1) {
             color: #0000FF;
         }
 
-        section>div:nth-child(2) {
+        section>div:nth-of-type(2) {
             color: #FF0000;
         }
 
-        section>div:nth-child(3) {
+        section>div:nth-of-type(3) {
             color: #00FF00;
         }
 
-        section>div:nth-child(4) {
+        section>div:nth-of-type(4) {
             color: #000000;
         }
     </style>
@@ -68,14 +72,14 @@
         <a href="./guitar_hitstory.html" target="myMain">吉他社社史</a>
         <a href="./guitar_learning.html" target="myMain">吉他社教學內容</a>
     </nav>
-    <nav>
+    <nav class="goto">
         <a href="#event0916">九月十六日</a>
         <a href="#event1031">十月三十一日</a>
         <a href="#event1225">十二月二十五日</a>
         <a href="#event0101">元月一日</a>
     </nav>
     <section>
-        <header>近期活動<br></header>
+        <p>近期活動</p>
         <div id="event0916">
             日期：九月十六日<br>
             活動主題：社員大會<br>
@@ -86,7 +90,6 @@
             2.指導老師致詞<br>
             3.社長致詞<br>
             4.社規介紹以及教學內容之簡介<br>
-            
         </div>
         <a href="#">TOP</a>
         <div id="event1031">
@@ -99,8 +102,7 @@
             2.微風往事<br>
             3.七月涼山<br>
             4.明天會更好(大合唱)<br>
-            
-        </div> 
+        </div>
         <a href="#">TOP</a>
         <div id="event1225">
             日期：十二月二十五日<br>
@@ -111,7 +113,6 @@
             1.凡我玉山高中之學生<br>
             2.參賽內容可為民歌演唱以及任何純吉他演奏方式如：古典吉他、爵士吉他演奏<br>
             3.參賽者必須自備樂器<br>
-            
         </div>
         <a href="#">TOP</a>
         <div id="event0101">
@@ -123,7 +124,6 @@
             1.由學校推舉優秀同學參予<br>
             2.除推舉參加外，其餘有興趣參賽的同學，請自行報名參加<br>
             3.參賽規則請參考比賽細則<br>
-            
         </div>
         <a href="#">TOP</a>
     </section>
