@@ -8,12 +8,17 @@
 </head>
 <body>
     <?php
-    $str='this, is, a, book';
+    $str='this,is,a,book';
     $array=explode(',',$str);
 
     echo '<pre>';
     print_r($array);
     echo '</pre>';
+
+    echo "implode".'<br>';
+    echo implode(' ',$array);
+    echo '<br>';
+    echo join(' ',$array);
     ?>
 </body>
 </html>
