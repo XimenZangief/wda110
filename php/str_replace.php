@@ -27,8 +27,11 @@
                 $array[]=$s;
             }
         }
-        echo "str_replace($array, '*', $str)" . '<br>';
+        ?>
+        echo str_replace($array, '*', $str)<br>
+        <?php
         echo str_replace($array, '*', $str);
-    ?>
+        ?>
+
 </body>
 </html>
