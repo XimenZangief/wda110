@@ -32,16 +32,21 @@ border: 1px solid black;
             <td>六</td>
         </tr>
     <?php
+    $day1=date('Y-m-01');
+    $month=date('m');
+    $weekDay1=date('w',strtotime($day1));
+    echo 'firstDay：'. $day1. '<br>';
+    echo 'month：'. $month. '<br>';
+    echo 'weekDay1：'. $weekDay1. '<br>';
+
     for($i=0;$i<6;$i++)
     {
         echo '<tr>';
         for($j=0;$j<7;$j++){
-            if($i==0 && $j<5)
-                echo '<td></td>';
-            else if($i==5 && $j>0)
+            if( ($i==0 && $j<$weekDay1) || ($i==$weekDay1 && $j>0) )
                 echo '<td></td>';
             else
-                echo '<td>'. ($i*7+$j+1-5) .'</td>';
+                echo '<td>'. ($i*7+$j+1-$weekDay1) .'</td>';
         }
     }
     ?>
