@@ -6,41 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <script src="./myscript.js"></script> -->
+    <!-- <script src="./calc.js"></script> -->
+
     <script>
-        //php string vs int 會自動轉型判斷
-        // js必須手動轉型
-        // typeof() js指令可以查詢資料型態
-        // console.log(typeof(desposit));
-        // let deposit = parseInt(prompt("存款餘額??", 0));
-        // let option = parseInt(prompt("1.轉帳 2.提款", 0));
-        // if( option == 2){
-        //     let money = parseInt(prompt("提多少?", 0));
-        //     console.log("存款"+deposit);
-        //     if(deposit > money){
-        //     console.log("你提款" + money);
-        //     }else{
-        //     console.log("餘額不足");
-        //     }
-        //     result= deposit-money;
-        //     console.log("餘額剩下"+result);
-        // }else{
-        //     console.log("目前只支援提款");
+        // alert(window.screen.width + "x" + window.screen.height);
+        // console.log(window);
+        // function helloFun() {
+        //     // console.log('hello TOUCH');
+        //     // window.document.body.innerHTML = "GGGGGGGG";
+        //     let spanObj = window.document.getElementsByClassName("lowercase");
+        //     spanObj.innerHTML = "HIGG";
+        //     spanObj.style.color = "skyblue";
         // }
-        // let money = prompt("提多少?", 0);
-        // console.log(deposit);
-        // console.log(option);
-        // console.log(money);
 
-        console.log("AAA123");
-        console.log(typeof("AAA123"));
-
-        let num=123;
-        console.log(num);
-        console.log(typeof(num));
+        function toggleMenu(){
+            console.log('toggleMenu');
+            let menuObj= document.getElementById("menu");
+            menuObj.classList.toggle("hide");
+            // if(menuObj.style.display)=="none"){
+            //     menuObj.style.display)=="block";}
+            // else{
+            //     menuObj.style.display="none";
+            //     }
+        }
     </script>
+    <style>
+        .hide{
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- <button onclick="helloFun()">Touch me</button>
+    <p><span class="lowercase">Lorem</span> ipsum dolor sit<span class="lowercase">amet.</span></p> -->
+        <div onclick="toggleMenu()">選單標題</div>
+            <ul id="menu" class="hide">
+                <li>1-1</li>
+                <li>1-2</li>
+                <li>1-3</li>
+            </ul>
+        
 </body>
+
 </html>
