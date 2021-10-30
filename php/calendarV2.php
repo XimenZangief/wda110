@@ -53,21 +53,17 @@
     $calendar = "<table>" .
         "<b> $monthName $year </b>" .
         "<tr>";
-    // foreach ($daysOfWeek as $day) {
-    //     $calendar .= "<th class='header'>$day</th>";
-    // }
-    for ($i = 0; $i < 7; $i++) {
-        $calendar .=  "<th> $daysOfWeek[$i] </th>";
+    foreach ($daysOfWeek as $day) {
+        $calendar .= "<th>$day</th>";
     }
-
-    $firstDay = 1;
     $calendar .= "</tr><tr>";
+
     // 根據$dayOfWeek的值(0~6)決定colspan要拉多長
     if ($dayOfWeek > 0) {
         $calendar .= "<td colspan= '$dayOfWeek' ></td>";
     }
     for ($i = 1; $i <= $numberDays; $i++, $dayOfWeek++) {
-        // 如果$dayOfWeek達到7即歸零且換行
+        // $dayOfWeek達到7即歸零換行
         if ($dayOfWeek == 7) {
             $dayOfWeek = 0;
             $calendar .= "</tr><tr>";
