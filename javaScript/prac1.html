@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+
+        body {
+            width: 750px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        header {
+            flex-basis: 750px;
+        }
+
+        .form {
+            flex-basis: 750px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row>label {
+            flex-basis: 25px;
+            width: 200px;
+            margin: 0px 30px;
+            margin: 200s;
+        }
+
+        .row>input {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            flex-basis: 75px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>shops</header>
+
+    <div class="container">
+        <label for="name">品名</label>
+        <label for="price">單價</label>
+        <label for="count">數量</label>
+        <label for="total">總和</label>
+    </div>
+    <form id="form">
+        <div class="row">
+            <input type="text" name="name" id="name" size="5">
+            <input type="number" name="price" id="price" size="5">
+            <input type="number" name="count" id="count" size="5">
+            <input type="number" name="total" id="total" size="5">
+        </div>
+    </form>
+
+    <p><input type="submit" value="submit" id="submit"></p>
+    <footer id="resP">總和</footer>
+
+    <script>
+        const form =document.getElementById("form");
+        const name = document.getElementById("name");
+        const price = document.getElementById("price");
+        const count = document.getElementById("count");
+        const total = document.getElementById("total");
+        const resP = document.getElementById("resP");
+
+        form.addEventListener("submit", function (e) {
+            //console.log(e);
+            e.preventDefault(); //預防表單重新整理的預設行為
+            //console.log("submit",e);
+            // console.log(name.value);
+            // console.log(price.value);
+            // console.log(count.value);
+            // console.log(total.value);
+            cal = parseInt(price.value) * parseInt(count.value);
+            console.log(cal);
+
+            resP.innerText = "Result: " + cal;
+
+        }
+        )
+    </script>
+</body>
+
+</html>
