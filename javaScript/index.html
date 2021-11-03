@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="form" method='GET'>
+        <p>
+            <label for="v1">num1</label>
+            <input type="text" name="num1" id="v1">
+        </p>
+        <p>
+            <label for="v2">num2</label>
+            <input type="text" name="num2" id="v2">
+        </p>
+        <p>
+            <label for="op">op</label>
+            <input type="text" name="option" id="op">
+        </p>
+        <p><input type="submit" value="SUBMIT" id="res"></p>
+    </form>
+    <p id="resP" onclick="">RES: </p>
+    <script>
+
+        // const str1 = "hello"; //JS字串可用以下三種方式包覆
+        // const str2 = 'hello';
+        // const str3 = `hello`;
+
+        // const strAll = `${str1} ${str2} ${str3}`;
+        // console.log(str1);
+        // console.log(str2);
+        // console.log(str3);
+        // console.log(strAll);
+
+        const form = document.getElementById("form");
+        const num1 = document.getElementById("v1");
+        const num2 = document.getElementById("v2");
+        const option = document.getElementById("op");
+        const res = document.getElementById("res");
+        const resP = document.getElementById("resP");
+
+
+        form.addEventListener("submit", function (e) {
+            //console.log(e);
+            e.preventDefault(); //預防表單重新整理的預設行為
+            //console.log("submit",e);
+            console.log(num1.value);
+            console.log(num2.value);
+            console.log(option.value);
+            console.log(res.value);
+            cal = parseInt(num1.value) + parseInt(num2.value);
+            console.log(cal);
+
+            resP.innerText = "Result: " + cal;
+
+        }
+        )
+    </script>
+</body>
+
+</html>
