@@ -12,82 +12,77 @@
             /* border: 1px solid black; */
             text-align: center;
         }
-
-        body {
-            width: 750px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        header {
-            flex-basis: 750px;
-        }
-
-        .form {
-            flex-basis: 750px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .row>label {
-            flex-basis: 25px;
-            width: 200px;
-            margin: 0px 30px;
-            margin: 200s;
-        }
-
-        .row>input {
-            width: 100px;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            flex-basis: 75px;
-        }
     </style>
 </head>
 
 <body>
-    <header>shops</header>
-
     <div class="container">
-        <label for="name">品名</label>
-        <label for="price">單價</label>
-        <label for="count">數量</label>
-        <label for="total">總和</label>
+        <form action="" id="myForm">
+            <table>
+                <tr>
+                    <td colspan="4">
+                        <h2>starbucks</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <th>品名</th>
+                    <th>單價</th>
+                    <th>數量</th>
+                    <th>總價</th>
+                </tr>
+
+                <tr>
+                    <td><input type="text" name="name" id="name" value="拿鐵" readonly="readonly"></td>
+                    <td><input type="number" name="price" id="price" value="150" readonly="readonly"></td>
+                    <td><input type="number" name="count" id="count" value="0"></td>
+                    <td><input type="number" name="total" id="total" value="0" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="name2" id="name2" value="Latte" readonly="readonly"></td>
+                    <td><input type="number" name="price2" id="price2" value="150" readonly="readonly"></td>
+                    <td><input type="number" name="count2" id="count2" value="0"></td>
+                    <td><input type="number" name="total2" id="total2" value="0" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <input type="submit" value="submit" id="subBtn">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <p id="pRes">result :</p>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+            </form>
     </div>
-    <form id="form">
-        <div class="row">
-            <input type="text" name="name" id="name" size="5">
-            <input type="number" name="price" id="price" size="5">
-            <input type="number" name="count" id="count" size="5">
-            <input type="number" name="total" id="total" size="5">
-        </div>
-    </form>
-
-    <p><input type="submit" value="submit" id="submit"></p>
-    <footer id="resP">總和</footer>
-
     <script>
-        const form =document.getElementById("form");
+        const form = document.getElementById("myForm");
         const name = document.getElementById("name");
         const price = document.getElementById("price");
         const count = document.getElementById("count");
         const total = document.getElementById("total");
-        const resP = document.getElementById("resP");
+        const name2 = document.getElementById("name2");
+        const price2 = document.getElementById("price2");
+        const count2 = document.getElementById("count2");
+        const total2 = document.getElementById("total2");
+        
+        const subBtn = document.getElementById("subBtn");
+        const pRes = document.getElementById("pRes");
 
         form.addEventListener("submit", function (e) {
             //console.log(e);
             e.preventDefault(); //預防表單重新整理的預設行為
-            //console.log("submit",e);
-            // console.log(name.value);
-            // console.log(price.value);
-            // console.log(count.value);
-            // console.log(total.value);
             cal = parseInt(price.value) * parseInt(count.value);
-            console.log(cal);
+            total.value= cal;
+            cal = parseInt(price2.value) * parseInt(count2.value);
+            total2.value= cal;
 
-            resP.innerText = "Result: " + cal;
+            allTotal =parseInt(total.value) + parseInt(total2.value);
+
+            pRes.innerText = "Result: " + allTotal;
 
         }
         )
