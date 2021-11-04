@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myForm>* {
+            border: lightgrey solid 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="" id="myForm">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <h2>9x9</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="n1" id="n1" value=""></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="n2" id="n2" value=""></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="SUBMIT" id="res"></td>
+                    <td colspan="2">
+                        <p id="pRes">result :</p>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        // let a =1;
+        // const result = (a==1 ? 1+1: "1+1" );
+        // console.log(result);
+
+        //const myArr = ['A', 'B', 'C', 'D'];
+        // console.log(myArr.length);
+        // for(let i=0; i<myArr.length; i++){
+        //     console.log(myArr[i]);
+        // }
+        // myArr.pop();//刪除最後一個元素
+        // myArr.push('egg');//增加一個
+
+        // myArr.forEach(myFunc);
+
+        // function myFunc(value,key){
+        //     console.log(value);
+        //     console.log(key);
+        // }
+        // const iphoneObj = {
+        //     "ip6": 5000,
+        //     "ip7": 6000,
+        //     "ip8": 7000,
+        //     "ip9": 9000
+        // };
+        // console.log (iphoneObj);
+
+        // for(const [key, value]of Object.entries(iphoneObj)){
+        //     console.log(`${key} :${value}`)
+        // }
+
+        //9*9for
+        // for (let i = 1; i <= 9; i++) {
+        //     for (let j = 1; j <= 9; j++) {
+        //         console.log(i + 'x' + j + '=' + (i * j));
+        //     }
+        // }
+        const form = document.getElementById("myForm");
+        const n1 = document.getElementById("n1");
+        const n2 = document.getElementById("n2");
+
+        const subBtn = document.getElementById("subBtn");
+        const pRes = document.getElementById("pRes");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            for (let i = 1; i <= parseInt(n1.value); i++) {
+                for (let j = 1; j <= parseInt(n2.value); j++) {
+                    result= i + 'x' + j + '=' + (i * j);
+                    console.log(result);
+                    pRes.innerText = "Result: " + result;
+                }
+            }
+        }
+        )
+    </script>
+</body>
+
+</html>
