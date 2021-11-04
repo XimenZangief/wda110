@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="myForm">
+            <table>
+                <tr>
+                    <td colspan="4">
+                        <h2>starbucks</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <th>品名</th>
+                    <th>單價</th>
+                    <th>數量</th>
+                    <th>總價</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="name" id="name" value="拿鐵" readonly="readonly"></td>
+                    <td><input type="number" name="price" id="price" value="150" readonly="readonly"></td>
+                    <td><input type="number" name="count" id="count" value="0"></td>
+                    <td><input type="number" name="total" id="total" value="0" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="name" id="name2" value="美式" readonly="readonly"></td>
+                    <td><input type="number" name="price" id="price2" value="150" readonly="readonly"></td>
+                    <td><input type="number" name="count" id="count2" value="0"></td>
+                    <td><input type="number" name="total" id="total2" value="0" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <input type="submit" value="submit" id="subBtn">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <p id="pRes">result :</p>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+        </form>
+    </div>
+    <script>
+        console.log(typeof ({}));
+        const form = document.getElementById("myForm");
+
+        const latteObj = {
+            name: "拿鐵",
+            price: 100,
+            count: 0,
+            total: 0
+        }
+        const blackObj = {
+            name: "美式",
+            price: 50,
+            count: 0,
+            total: 0
+        }
+        //獲取id.value= Obj.key
+        name.value= latteObj.name;
+        price.value= latteObj.price;
+        count.value= latteObj.count;
+        total.value= latteObj.total;
+        name2.value= blackObj.name;
+        price2.value= blackObj.price;
+        count2.value= blackObj.count;
+        total2.value= blackObj.total;
+        
+
+        const subBtn = document.getElementById("subBtn");
+        const pRes = document.getElementById("pRes");
+
+        form.addEventListener("submit", function (e) {
+            //console.log(e);
+            e.preventDefault(); //預防表單重新整理的預設行為
+            cal = parseInt(price.value) * parseInt(count.value);
+            total.value = cal;
+            cal = parseInt(price2.value) * parseInt(count2.value);
+            total2.value = cal;
+
+            allTotal = parseInt(total.value) + parseInt(total2.value);
+
+            pRes.innerText = "Result: " + allTotal;
+
+        }
+        )
+    </script>
+</body>
+
+</html>
