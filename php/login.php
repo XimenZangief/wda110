@@ -30,11 +30,9 @@
             width: 600px;
             height: 400px;
             border: lightgrey solid 1px;
+            box-shadow: 2px 2px;
             align-self: center;
             text-align: center;
-        }
-        .screen{
-            
         }
     </style>
 </head>
@@ -44,7 +42,17 @@
     </div>
     <div class="rightSide">
         <section class="section">
-            <form action="./login_1.php" class="screen" method="POST">
+            <form action="./login_1.php" id="login" method="POST">
+                <?php
+                if(!empty($_POST)){
+                $account = $_POST['account'];
+                $pwd = $_POST['pwd'];
+                if ($account == 'root' && $pwd == '0000')
+                    echo 'correct <br>';
+                else
+                    echo 'error <br>';
+                }
+                ?>
                 <p>LoginPage</p>
                 <p>
                     <label for="account">ACCOUNT</label>
