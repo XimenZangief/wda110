@@ -42,15 +42,26 @@
     </div>
     <div class="rightSide">
         <section class="section">
-            <form action="./login_1.php" id="login" method="POST">
+            <form action="./login.php" id="login" method="POST">
                 <?php
+                $users=[
+                    ['account'=>'root','pwd'=>'0000'],
+                    ['account'=>'bob','pwd'=>'0605'],
+                    ['account'=>'alice','pwd'=>'1228'],
+                    ['account'=>'cindy','pwd'=>'0314'],
+                ];
                 if(!empty($_POST)){
-                $account = $_POST['account'];
-                $pwd = $_POST['pwd'];
-                if ($account == 'root' && $pwd == '0000')
-                    echo 'correct <br>';
-                else
-                    echo 'error <br>';
+                    $account= $_POST['account'];
+                    $pwd= $_POST['pwd'];
+                    $test=false;
+                    foreach($users as $user){        
+                        if($account==$user['account'] && $pwd==$user['pwd'])
+                            $test=true;        
+                    }
+                    if($test)
+                        echo 'correct <br>';
+                    else
+                        echo 'error <br>';
                 }
                 ?>
                 <p>LoginPage</p>
