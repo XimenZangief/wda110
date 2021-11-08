@@ -2,7 +2,6 @@
 session_start();
 if (isset($_COOKIE['user']) || isset($_SESSION['user']))
     header('location:login_ok.php');
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +48,7 @@ if (isset($_COOKIE['user']) || isset($_SESSION['user']))
     </div>
     <div class="rightSide">
         <section class="section">
-            <form action="./check_login.php" id="login" method="POST">
+            <form action="./login_ok.php" id="login" method="POST">
                 <?php
                 $users = [
                     ['account' => 'root', 'pwd' => '0000'],
