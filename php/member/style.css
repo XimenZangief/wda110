@@ -38,3 +38,17 @@ footer{
     background-color: black;
     color: white;
 }
+
+#regForm input, #loginForm input{
+    border:0;
+}
+
+#regForm input, #loginForm input{
+    font-size: 16px;
+    padding: 5px 2px;
+    border-bottom: 1px solid black;
+}
+#regForm input[type='submit'], #loginForm input[type='submit'], #loginForm input[type='reset']{
+    border: 1px solid #555;
+    border-radius: 10px;
+}

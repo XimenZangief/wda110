@@ -7,12 +7,12 @@
     <title>會員中心</title>
 </head>
 <body>
-<?php include "header.php";?>
-    <?php include "nav.php";?>
-    <?php include "site_bar.php";?>
+<?php include "./include/header.php"; ?>
+    <?php include "./include/nav.php"; ?>
+    <?php include "./include/site_bar.php"; ?>
     <div class="content">
     會員中心
     </div>
-    <?php include "footer.php";?>
+    <?php include "./include/footer.php";?>
 </body>
 </html>
