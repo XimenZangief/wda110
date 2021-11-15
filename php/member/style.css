@@ -30,6 +30,9 @@ header, .header{
 .container>a:hover{
     color: pink;
 }
+.side-bar{
+    text-decoration: none;
+}
 footer{
     width: 100vw;
     position: fixed;

@@ -1,4 +1,4 @@
-<div class="site-bar">
+<div class="side-bar">
     <ul>
         <li>one</li>
         <li>two</li>

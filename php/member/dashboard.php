@@ -11,7 +11,7 @@
     <?php include "./include/nav.php"; ?>
     <?php include "./include/site_bar.php"; ?>
     <div class="content">
-    會員中心
+    歡迎來到 會員中心
     </div>
     <?php include "./include/footer.php";?>
 </body>
