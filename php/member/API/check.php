@@ -2,11 +2,10 @@
 // $acc=$_POST['acc'];
 // $pwd=$_POST['pwd'];
 
-// $sql="select * from `account` where `account`=$acc && `pwd`=$pwd";
-$sql="SELECT count(*) from `account` where `acc`='{$_POST['acc']}' && `pwd`='{$_POST['pwd']}'";
-
 $dsn="mysql:host=localhost;charset=utf8;dbname=member";
 $pdo= new PDO($dsn,'root','');
+// $sql="select * from `account` where `account`=$acc && `pwd`=$pwd";
+$sql="SELECT count(*) from `account` where `acc`='{$_POST['acc']}' && `pwd`='{$_POST['pwd']}'";
 
 $result=$pdo->query($sql);
 echo '<pre>';
