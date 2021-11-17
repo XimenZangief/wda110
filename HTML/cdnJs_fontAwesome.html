@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            box-sizing: border-box;
+            overflow: hidden;
+            text-align: center;
+            margin: auto;
+        }
+
+        .formBody {
+            margin: 20px auto;
+        }
+
+        header {
+            width: 80%;
+            background-color: skyblue;
+            border-radius: 20px 20px;
+            padding: 20px 0;
+            margin: 0 auto;
+            box-shadow: black 2px 2px 5px;
+        }
+
+        .form-group[type="submit"],
+        .form-group[type="reset"] {
+            display: inline-block;
+            width: 100px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <i class="fab fa-playstation fa-5x fa-spin"></i>
+    <i class="fab fa-xbox fa-pulse"></i>
+    <i class="fas fa-clock"></i>
+    <i class="fab fa-android fa-spin"></i>
+
+    <form action="POST">
+        <table class="formBody">
+            <tr>
+                <header>
+                    <h1><i class="fas fa-spinner fa-pulse"></i>FORMGET<i class="fas fa-spinner fa-spin"></i></h1>
+                </header>
+            </tr>
+            <tr class="form-group">
+                <td><label for="email"><i class="far fa-envelope"></i>EMAIL</label></td>
+                <td><input type="text" name="email" id="email"></td>
+            </tr>
+            <tr class="form-group">
+                <td><label for=""><i class="fas fa-user"></i>NAME</label></td>
+                <td><input type="text" name="user" id=""></td>
+            </tr>
+            <tr class="form-group">
+                <td><label for="sex"><i class="fas fa-user"></i>sex</label></td>
+                <td>
+                    <input type="radio" name="sex" id="sex" value="1">male
+                    <input type="radio" name="sex" id="sex" value="2">female
+                </td>
+            </tr>
+            <tr class="form-group">
+                <td><label for="birth"><i class="fas fa-user"></i>birth</label></td>
+                <td><input type="date" name="birth" id="birth"></td>
+            </tr>
+            <tr class="form-group">
+                <td><label for="html"><i class="fas fa-user"></i>profess</label></td>
+                <td>
+                    <input type="checkbox" name="profess" id="html" value="1">HTML
+                    <input type="checkbox" name="profess" id="CSS" value="2">CSS
+                    <input type="checkbox" name="profess" id="JS" value="3">JAVASCRIPT
+                </td>
+            </tr>
+            <tr class="form-group">
+                <td><label for=""><i class="fas fa-user"></i>profess</label></td>
+                <td>
+                    <select name="dp" id="dp">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="form-group">
+                <td><label for="comment"><i class="far fa-comment-alt"></i>COMMENT</label></td>
+                <td><textarea name="comment" id="" cols="23" rows="5" class="form-control"
+                        placeholder="type here"></textarea></td>
+            </tr>
+        </table>
+        <input class="form-group" type="submit" value="OK"><i class="fas fa-check"></i>
+        <input class="form-group" type="reset" value="RESET"><i class="fas fa-times"></i>
+    </form>
+
+</body>
+
+</html>
