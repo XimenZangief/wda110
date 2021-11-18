@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,10 +16,6 @@
     </style>
 </head>
 <body>
-    <?php
-    session_start();
-    echo $_SESSION['name'];
-    ?>
     <h1>線上月曆</h1>
     
 
@@ -47,7 +43,7 @@
 
 </style>
 <?php
-    $specialDate=['2021-11-15'=>'發薪水','2021-12-25'=>'聖誕節'];
+    $specialDate=['11-15'=>'發薪水','12-25'=>'聖誕節'];
    //echo $specialDate['2011-11-11'];
 /*     $firstDay=date("Y-m-01");
     $month=date("m"); */
@@ -116,13 +112,13 @@
 
 <h3><?=$year;?>年<?=$month;?>月</h3>
  <div>
-     <a href="./calendar.php?=$lastyear;?>&month=<?=$lastmonth;?>">上一個月</a>
-     <a href="./calendar.php.php?year=<?=$nextyear;?>&month=<?=$nextmonth;?>">下一個月</a>
+     <a href="index.php?year=<?=$lastyear;?>&month=<?=$lastmonth;?>">上一個月</a>
+     <a href="index.php?year=<?=$nextyear;?>&month=<?=$nextmonth;?>">下一個月</a>
 </div>   
 <div class="calendar">
     
 <?php
-$w=0;
+
 
 //月曆頭的地方
 foreach($headers as $header){
@@ -133,16 +129,14 @@ foreach($headers as $header){
 
 //月曆body的地方
 for($i=0;$i<$allCells;$i++){
+    $w=$i%7;
     if(is_numeric($td[$i])){
-        $date=date("$year-$month-").$td[$i];
-        $w=date("w",strtotime($date));
+        $date=date("$month-").$td[$i];
     }
-    
+
     if($w==0 || $w==6){
-
-        echo "<div class='cell'>";
+        echo "<div class='dayoff cell'>";
     }else{
-
         echo "<div class='cell'>";
     }
     echo $td[$i];

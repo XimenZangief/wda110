@@ -7,10 +7,118 @@
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .box {
+            background-color: skyblue;
+            border: 1px solid black;
+            height: 200px;
+        }
+
+        #myCarousel {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
     <p class="text-primary bg-dark text-center">.text-primary</p>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://c.tenor.com/-SrdahVefRgAAAAC/gawr-gura-hololive.gif" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="https://c.tenor.com/l6u0sCzYdiwAAAAC/gura-roomba-gawr-gura.gif" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="https://c.tenor.com/0qexJNBcWJYAAAAd/gawr-gura-gura.gif" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="https://c.tenor.com/Pzfj5Q5rRC0AAAAd/gawr-gura-hololive.gif" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="https://c.tenor.com/q86AGnNX5UQAAAAC/gura-headpat-gawr-gura.gif" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="https://c.tenor.com/eo7B_X-CxQ8AAAAi/gawr-gura-walfie.gif" alt="">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+    <div class="lead">
+        <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+        <p>You can use the del tag to <del>highlight</del> text.</p>
+        <p>You can use the s tag to <s>highlight</s> text.</p>
+        <p>You can use the ins tag to <ins>highlight</ins> text.</p>
+        <p>You can use the u tag to <u>highlight</u> text.</p>
+        <p>You can use the small tag to <small>highlight</small> text.</p>
+        <p>You can use the strong tag to <strong>highlight</strong> text.</p>
+        <p>You can use the em tag to <em>highlight</em> text.</p>
+    </div>
+    <div class="blockquote">
+        <p>You can use the blockquote class.</p>
+        <footer class="blockquote-footer">blockquote-footer in <cite title="Source Title">cite title</cite></footer>
+    </div>
+
+
+    The following HTML elements: span, section, and div defines a section in a document.
+    <dl>
+        <dt>dl>dt>dd</dt>
+        <dd>- DDdddddddddddddddddddddddd</dd>
+        <dt>tdtdtdt</dt>
+        <dd>- dddddddddddddddddddddd</dd>
+    </dl>
+
+    <p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+
+    <pre>
+        Text in a pre element
+    is displayed in a fixed-width
+    font, and it preserves
+    both      spaces and
+    line breaks.
+    </pre>
+
+    <div class="container mt-2">
+        <h1>grid-error</h1>
+        <div class="row">
+            <div class="col-3 col-md-3 col-lg-1">
+                <div class="box">1</div>
+            </div>
+            <div class="col-3 col-md-6 col-lg-1">
+                <div class="box">2</div>
+            </div>
+            <div class="col-3 col-md-1 col-lg-10">
+                <div class="box">3</div>
+            </div>
+        </div>
+    </div>
+
     <div class="alert alert-primary" role="alert">
         A simple primary alert—check it out!
     </div>
@@ -31,7 +139,7 @@
             <div class="col-sm">123</div>
         </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col">123</div>
             <div class="col">123</div>
@@ -40,6 +148,42 @@
             <div class="col">123</div>
         </div>
     </div>
+
+    <table class="table table-hover table-sm">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+        </tbody>
+    </table>
+
+
 
     <!-- bs bundle -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
