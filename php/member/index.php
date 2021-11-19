@@ -55,13 +55,6 @@
     <?php include "./include/header.php"; ?>
     <?php include "./include/nav.php"; ?>
     <?php include "./include/site_bar.php"; ?>
-    <div class="content">
-        <label for="acc">帳號</label>
-        <input type="text" name="acc" id="">
-        <br>
-        <label for="pwd">密碼</label>
-        <input type="text" name="pwd" id="">
-    </div>
     <?php include "./include/footer.php"; ?>
 </body>
 

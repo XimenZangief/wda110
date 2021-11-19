@@ -15,27 +15,11 @@
     <?php include "./include/nav.php"; ?>
     <?php include "./include/site_bar.php"; ?>
     <div class="content">
-        <form action="./api/check.php" method="post" id="loginForm">
-            <table>
-                <tr>
-                    <td colspan="2">LOGIN</td>
-                </tr>
-                <tr>
-                    <td>帳號</td>
-                    <td><input type="text" name="acc" id=""></td>
-                </tr>
-                <tr>
-                    <td>密碼</td>
-                    <td><input type="password" name="pwd" id=""></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" value="OK">
-                        <input type="reset" value="RESET">
-                    </td>
-                </tr>
-            </table>
-        </form>
+        
+    <?php $action=(isset($_GET['action']))?$_GET['action']:'login';
+    include "./frontEnd/". $action. ".php";
+    ?>
+    <?php include "./frontEnd/login.php"?>
     </div>
     <?php include "./include/footer.php"; ?>
 </body>

@@ -1,7 +1,7 @@
 <?php
 // $acc=$_POST['acc'];
 // $pwd=$_POST['pwd'];
-
+session_start();
 $dsn="mysql:host=localhost;charset=utf8;dbname=member";
 $pdo= new PDO($dsn,'root','');
 // $sql="select * from `account` where `account`=$acc && `pwd`=$pwd";
