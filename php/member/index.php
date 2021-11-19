@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,14 +38,21 @@
         }
     </style>
     <?php
-        if(isset($_GET['err'])){
-            echo "PLZ RESTART";
-        }
+    if (isset($_GET['err'])) {
+        echo "PLZ RESTART";
+    }
+    if(isset($_SESSION['user'])){
     ?>
-</head>
+        <a href="./dashboard.php"><button>會員中心</button></a>
+    <?php
+    }else{?>
+        <a href="reg.php"><button>註冊新會員</button></a>
+        <a href="login.php"><button>點我登入</button></a>
+    <?php } ?>
+    </head>
 
 <body>
-<?php include "./include/header.php"; ?>
+    <?php include "./include/header.php"; ?>
     <?php include "./include/nav.php"; ?>
     <?php include "./include/site_bar.php"; ?>
     <div class="content">
@@ -53,13 +61,8 @@
         <br>
         <label for="pwd">密碼</label>
         <input type="text" name="pwd" id="">
-
     </div>
     <?php include "./include/footer.php"; ?>
-    <nav>
-        <a href="reg.php"><button>register</button></a>
-        <a href="login.php"><button>login</button></a>
-    </nav>
 </body>
 
 </html>

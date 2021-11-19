@@ -17,6 +17,7 @@ var_dump($result);
 echo '</pre>';
 
 if($result>0){
+    $_SEESION['user']=$_POST['acc'];
     header('location:../dashboard.php');
 }
 else{
