@@ -1,6 +1,6 @@
 <?php
 $dsn="mysql:host=localhost;charset=utf8;dbname=member";
-$pdo=new PDO($sql,'root','');
+$pdo=new PDO($dsn,'root','');
 
 $id=$_POST['id'];
 $address=$_POST['address'];
@@ -14,6 +14,6 @@ $sql_detail="UPDATE `detail` set `address`='$address',`mobile`='$mobile',`birth`
 $pdo->exec($sql_acc);
 $pdo->exec($sql_detail);
 
-header("location:../dashboard.php?user={$_GET['user']}");
-                                 
+echo '修改成功';
+header("refresh:3;url=../content.php?action=dashboard");
 ?>

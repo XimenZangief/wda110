@@ -17,10 +17,11 @@ var_dump($result);
 echo '</pre>';
 
 if($result>0){
-    $_SEESION['user']=$_POST['acc'];
-    header('location:../dashboard.php');
+    $_SESSION['user']=$_POST['acc'];
+    header('refresh:3;url=../dashboard.php');
 }
 else{
-    header('location:../index.php?err=1');
+    echo 'ERROR';
+    header('refresh:3;url=../index.php?err=1');
 }
 ?>

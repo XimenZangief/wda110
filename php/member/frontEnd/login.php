@@ -1,4 +1,4 @@
-<form action="./API/check.php" method="post" id="loginForm">
+<form action="../API/check.php" method="post" id="loginForm">
     <table>
         <tr>
             <td colspan="2">LOGIN</td>

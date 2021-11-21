@@ -7,26 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DBJ member</title>
-    <link rel="stylesheet" href="./style.css">
-    <?php
-    if (isset($_GET['err'])) {
-        echo "PLZ RESTART";
-    }
-    if(isset($_SESSION['user'])){
-    ?>
-        <a href="./dashboard.php"><button>會員中心</button></a>
-    <?php
-    }else{?>
-        <a href="reg.php"><button>註冊新會員</button></a>
-        <a href="login.php"><button>點我登入</button></a>
-    <?php } ?>
-    </head>
+    <?php include "./include/head.php"; ?>
+</head>
 
 <body>
-    <?php include "./include/header.php"; ?>
-    <?php include "./include/nav.php"; ?>
-    <?php include "./include/side_bar.php"; ?>
-    <?php include "./include/footer.php"; ?>
+    <nav>
+        <?php
+        if (isset($_GET['err'])) {
+            echo "帳號或密碼錯誤，請重新登入";
+        }
+        ?>
+        <?php
+        if (isset($_SESSION['user'])) {
+        ?>
+            <a href="content.php?action=dashboard"><button>會員中心</button></a>
+        <?php
+        } else {
+        ?>
+            <a href="content.php?action=reg"><button>註冊新會員</button></a>
+            <a href="content.php?action=login"><button>點我登入</button></a>
+        <?php
+        }
+        ?>
+    </nav>
 </body>
 
 </html>

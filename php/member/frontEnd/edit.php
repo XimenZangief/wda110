@@ -13,15 +13,15 @@
             <td></td>
         </tr>
         <tr>
-            <td>ID:<?= $user['id']; ?></td>
+            <td colspan='2'>ID:<?= $user['id']; ?></td>
             <td><input type="hidden" name="id" value="<?= $user['id']; ?>"></td>
         </tr>
         <tr>
             <td>帳號</td>
-            <td><input type="readonly" name="acc" value="<?= $user['acc']; ?>"></td>
+            <td><input type="text" name="acc" value="<?= $user['acc']; ?>" readonly="readonly"></td>
         </tr>
         <tr>
-            <td>密碼</td>
+            <td>新密碼</td>
             <td><input type="password" name="pwd" value="<?= $user['pwd']; ?>"></td>
         </tr>
         <tr>
