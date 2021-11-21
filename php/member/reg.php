@@ -12,7 +12,7 @@
 <body>
     <?php include "./include/header.php"; ?>
     <?php include "./include/nav.php"; ?>
-    <?php include "./include/site_bar.php"; ?>
+    <?php include "./include/side_bar.php"; ?>
     <div class="content">
         <!-- emmet form:post[action=""] -->
         <form action="./api/reg.php" method="post" id="regForm">

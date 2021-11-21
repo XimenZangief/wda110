@@ -23,5 +23,4 @@ if($result>0){
 else{
     header('location:../index.php?err=1');
 }
-
 ?>

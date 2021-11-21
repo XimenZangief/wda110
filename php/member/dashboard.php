@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(isset($_SESSION['user'])){
+if(!(isset($_SESSION['user']))){
     header("location:index.php");
     exit(); //強制跳脫
 }
@@ -19,7 +19,7 @@ if(isset($_SESSION['user'])){
 <body>
     <?php include "./include/header.php"; ?>
     <?php include "./include/nav.php"; ?>
-    <?php include "./include/site_bar.php"; ?>
+    <?php include "./include/side_bar.php"; ?>
     <div class="content">
         歡迎 <?=$_SESSION['user'];?> 會員 <br>
         <?php

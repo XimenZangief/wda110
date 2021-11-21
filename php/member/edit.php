@@ -19,7 +19,7 @@ if(isset($_SESSION['user'])){
 <body>
     <?php include "./include/header.php"; ?>
     <?php include "./include/nav.php"; ?>
-    <?php include "./include/site_bar.php"; ?>
+    <?php include "./include/side_bar.php"; ?>
     <div class="content">
     <?php include "./frontEnd/edit.php"?>
     </div>

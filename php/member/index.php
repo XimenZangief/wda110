@@ -7,36 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DBJ member</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        nav {
-            height: 60px;
-            box-shadow: 0 2px 10px #000;
-            display: block;
-            width: 100%;
-            padding: 10px 10px;
-            text-align: right;
-        }
-
-        button {
-            padding: 5px 10px;
-            margin: 0px 5px;
-            border-radius: 5px 5px;
-            background-color: lightgrey;
-        }
-
-        .login-box {
-            background-color: lightskyblue;
-            width: 60vh;
-            height: 60vh;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
     <?php
     if (isset($_GET['err'])) {
         echo "PLZ RESTART";
@@ -54,7 +25,7 @@
 <body>
     <?php include "./include/header.php"; ?>
     <?php include "./include/nav.php"; ?>
-    <?php include "./include/site_bar.php"; ?>
+    <?php include "./include/side_bar.php"; ?>
     <?php include "./include/footer.php"; ?>
 </body>
 

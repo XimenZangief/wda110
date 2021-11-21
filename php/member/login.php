@@ -13,13 +13,12 @@
 <body>
     <?php include "./include/header.php"; ?>
     <?php include "./include/nav.php"; ?>
-    <?php include "./include/site_bar.php"; ?>
+    <?php include "./include/side_bar.php"; ?>
     <div class="content">
-        
-    <?php $action=(isset($_GET['action']))?$_GET['action']:'login';
-    include "./frontEnd/". $action. ".php";
-    ?>
-    <?php include "./frontEnd/login.php"?>
+        <?php 
+        $action = (isset($_GET['action']))?$_GET['action']:'login';
+        include "./frontEnd/" .$action. ".php";
+        ?>
     </div>
     <?php include "./include/footer.php"; ?>
 </body>
