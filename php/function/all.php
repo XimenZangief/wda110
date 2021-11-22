@@ -9,12 +9,11 @@ foreach($rows as $row){
 echo '</table>';
 function all($table)
 {
-    $dsn = "mysql:host=localhost;charset=utf8;dbname=member";
-    $pdo = new PDO($dsn, 'root', '');
+    include "./include/pdo.php";
     $sql = "SELECT * from `$table`";
-    $result = $pdo->query($sql)->fetchAll();
+    $result = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     return $result;
-    //return $pdo->query($sql)->fetchAll();
+    //return $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 }
 
 // echo '<pre>';
