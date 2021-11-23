@@ -2,5 +2,6 @@
     session_start();
     unset($_SESSION['user']);
 
-    header("location:index.php");
+    echo '登出';
+    header("refresh:3;url=index.php");
 ?>

@@ -15,5 +15,5 @@ $sql_detail="DELETE from `detail` where `id`='{$user_id}'";
 $pdo->exec($sql_acc);
 $pdo->exec($sql_detail);
 unset($_SESSION['user']); //清掉session
-header("location:index.php");
+header("refresh:3;url=./index.php");
 ?>
