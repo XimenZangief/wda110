@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>員工表單</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h2>員工表單</h2>
+            <form class="form-horizontal" action="">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="name">姓名:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" placeholder="Enter Name..." name="email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-1" for="sex">性別:</label>
+                    <label class="radio-inline"><input type="radio" name="sex" checked>男</label>
+                    <label class="radio-inline"><input type="radio" name="sex">女</label>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="name">生日:</label>
+                    <div class="col-sm-3">
+                        <input type="date" class="form-control" id="birth" name="birth">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="part">部門:</label>
+                    <select class="form-control col-sm-3" id="part">
+                        <option>請選擇部門...</option>
+                        <option>管理部</option>
+                        <option>行政部</option>
+                        <option>資訊部</option>
+                        <option>行銷部</option>
+                        <option>業務部</option>
+                    </select>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="HTML">HTML </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="PHP">PHP </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="javascript">javascript </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="photoshop">photoshop </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="illustrator">illustrator                    </label>
+                </div><br>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-info">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="rounded"><img src="https://fakeimg.pl/300/ff0000/?text=RC"></div>
+    <div><img src="https://fakeimg.pl/300/ff0000/?text=RC" class="rounded"></div>
+    <div class="rounded-circle float-right"><img src="https://fakeimg.pl/300/ff0000/?text=RC FR"></div>
+    <div><img src="https://fakeimg.pl/300/ff0000/?text=RC FR" class="rounded-circle float-right"></div>
+    <div class="rounded-circle float-left"><img src="https://fakeimg.pl/300/ff0000/?text=RC FL"></div>
+    <div><img src="https://fakeimg.pl/300/ff0000/?text=RC FL" class="rounded-circle float-left"></div>
+    <div class="rounded-circle"></div>
+    <div class="rounded-circle"></div>
+    <div class="float-none">Float none</div>
+</body>
+
+</html>
