@@ -18,7 +18,7 @@ echo '</pre>';
 
 if($result>0){
     $_SESSION['user']=$_POST['acc'];
-    header('refresh:3;url=../dashboard.php');
+    header('refresh:3;url=../content.php');
 }
 else{
     echo 'ERROR';

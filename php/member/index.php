@@ -19,7 +19,7 @@
         ?>
         <?php
         if (isset($_SESSION['user'])) {
-        ?>
+        ?>   
             <a href="content.php?action=dashboard"><button>會員中心</button></a>
         <?php
         } else {
