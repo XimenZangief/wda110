@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!isset($_SESSION['user'])){
+    header("location:index.php");
+    exit();
+}
 $dsn="mysql:host=localhost;charset=utf8;dbname=member";
 $pdo=new PDO($dsn,'root','');
 
