@@ -107,9 +107,10 @@
     <!-- tabs start -->
     <div id="nav-tab"><br></div>
     <div class="container-fluid mt-5">
-        <ul class="nav nav-tabs nav-justified">
-            <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#tab1">TAB1</a>
+        <!-- <ul class="nav nav-tabs nav-justified"> -->
+        <ul class="nav nav-pills nav-justified">
+            <li class="nav-item ">
+                <a class="nav-link active box" data-toggle="tab" href="#tab1">TAB1</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#tab2">TAB2</a>
@@ -213,7 +214,7 @@
             <div id="tab2" class="container tab-pane active text-left"><br>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="box">
+                        <div class="box mb-3">
                             <div class="icon text-success py-3 fa-5x">
                                 <i class="fas fa-child"></i>
                             </div>
@@ -257,16 +258,31 @@
                             <h6 class="mt-2">Lorem ipsum dolor sit amet.</h6>
                         </div>
                     </div>
-                    
+
                 </div>
                 <!-- tab2 row1 end -->
 
                 <div class="row">
-                    
+
                 </div>
                 <!-- tab2 row2 end -->
             </div>
             <div id="tab3" class="container tab-pane fade"><br>
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-8">
+                            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">Link HREF</a>
+                            <a class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">BUTTON DATA-taret</a>
+                        </div>g
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, vel?
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
