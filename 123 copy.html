@@ -1,158 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Bootstrap Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
 
-<body>
-
-    <div class="container-fluid clearfix">
-        <h2>TABLE</h2>
-        <button type="button" class="btn btn-success  float-right mx-5 mb-2" data-toggle="#modal"
-            data-target="#addModal" id="addBtn">
-            +ADD+
-        </button>
-
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>EDIT / DEL</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>AMY</td>
-                    <td>
-                        <button type="button" class="btn btn-primary m-1 editBtn" data-toggle="#modal"
-                            data-target="#editMadol">
-                            +EDIT+
-                        </button>
-                        <button type="button" class="btn btn-danger m-1 delBtn" data-toggle="#modal"
-                            data-target="#delModal">
-                            +DEL+
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>bob</td>
-                    <td>
-                        <button type="button" class="btn btn-primary m-1 editBtn" data-toggle="#modal"
-                            data-target="#editMadol">
-                            +EDIT+
-                        </button>
-                        <button type="button" class="btn btn-danger m-1 delBtn" data-toggle="#modal"
-                            data-target="#delModal">
-                            +DEL+
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>cat</td>
-                    <td>
-                        <button type="button" class="btn btn-primary m-1 editBtn" data-toggle="#modal"
-                            data-target="#editMadol">
-                            +EDIT+
-                        </button>
-                        <button type="button" class="btn btn-danger m-1 delBtn" data-toggle="#modal"
-                            data-target="#delModal">
-                            +DEL+
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <!-- the addModal -->
-        <div class="modal fade" id="addModal">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">addModal</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <!-- Modal body -->
-                    <div class="modal-body col-12">
-                        <div class="page-header">
-                            <h2>addModal</h2>
-                            <form class="form-horizontal" action="" method="">
-                            </form>
-                        </div>
-                    </div>
-                </div>
+  <body>
+    <div class="container-fluid">
+      <h2>TABLE
+      <button
+          type="button"
+          class="btn btn-success mx-5 mb-2"
+          data-toggle="#modal"
+          data-target="#addModal"
+          id="addBtn"
+        >
+          +ADD+
+        </button></h2>
+      <!-- the addModal -->
+      <div class="modal fade" id="addModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">addModal</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
             </div>
-        </div>
-        <!-- The editModal -->
-        <div class="modal fade" id="editModal">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">editModal</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <!-- Modal body -->
-                    <div class="modal-body col-12">
-                        <div class="page-header">
-                            <h2>editModal</h2>
-                            <form class="form-horizontal" action="" method="">
-                            </form>
-                        </div>
-                    </div>
-                </div>
+            <!-- Modal body -->
+            <div class="modal-body col-12">
+              <div class="page-header">
+                <h2>addModal</h2>
+                <form class="form-horizontal" action="" method=""></form>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- The delModal -->
-        <div class="modal fade" id="delModal">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">delModal</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <!-- Modal body -->
-                    <div class="modal-body col-12">
-                        <div class="page-header">
-                            <h2>delModal</h2>
-                            <form class="form-horizontal" action="" method="">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
 
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>EDIT / DEL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>AMY</td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-primary m-1 editBtn"
+                data-toggle="#modal"
+                data-target=".editMadol"
+              >
+                +EDIT+
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger m-1 delBtn"
+                data-toggle="#modal"
+                data-target=".delModal"
+              >
+                +DEL+
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>bob</td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-primary m-1 editBtn"
+                data-toggle="#modal"
+                data-target=".editMadol"
+              >
+                +EDIT+
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger m-1 delBtn"
+                data-toggle="#modal"
+                data-target=".delModal"
+              >
+                +DEL+
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>cat</td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-primary m-1 editBtn"
+                data-toggle="#modal"
+                data-target=".editMadol"
+              >
+                +EDIT+
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger m-1 delBtn"
+                data-toggle="#modal"
+                data-target=".delModal"
+              >
+                +DEL+
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- The editModal -->
+      <div class="modal fade editModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">editModal</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body col-12">
+              <div class="page-header">
+                <h2>editModal</h2>
+                <form class="form-horizontal" action="" method=""></form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- The delModal -->
+      <div class="modal fade delModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">delModal</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body col-12">
+              <div class="page-header">
+                <h2>delModal</h2>
+                <form class="form-horizontal" action="" method=""></form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $("#addBtn").click(function () {
-                $("#addModal").modal({ backdrop: "static" });
-            });
+      $(document).ready(function () {
+        $("#addBtn").click(function () {
+          $("#addModal").modal({ backdrop: "static" });
         });
-        $(document).ready(function () {
-            $("#editBtn").click(function () {
-                $(".editModal").modal({ backdrop: "static" });
-            });
+      });
+      $(document).ready(function () {
+        $(".editBtn").click(function () {
+          $(".editModal").modal({ backdrop: "static" });
         });
-        $(document).ready(function () {
-            $("#delBtn").click(function () {
-                $(".delModal").modal({ backdrop: false });
-            });
+      });
+      $(document).ready(function () {
+        $(".delBtn").click(function () {
+          $(".delModal").modal({ backdrop: false });
         });
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
