@@ -42,13 +42,11 @@ input
             console.log(dstcm);
             dstinch = parseFloat(inch.value);
             console.log(dstinch);
-            if (typeof (dstcm) != NaN || dstcm != "undefined") {
-                result = dstcm * 0.39;
-                console.log('cm->inch:' + result);
-                inch.value = result;
-                opcm.innerText = "CM:" + dstcm;
-                opinch.innerText = "inch:" + result;
-            }
+            result = Math.round(dstcm * 0.39 * 100)/ 100;
+            console.log('cm->inch:' + result);
+            inch.value = result;
+            opcm.innerText = "CM:" + dstcm;
+            opinch.innerText = "inch:" + result;
         })
         inch.addEventListener("change", function (e) {
             //如果inch不是空值或怪怪的東西，則inch->cm
@@ -57,13 +55,11 @@ input
             console.log(dstcm);
             dstinch = parseFloat(inch.value);
             console.log(dstinch);
-            if (typeof (dstinch) != NaN || dstinch != "undefined") {
-                result = dstinch * 2.54;
-                console.log('inch->cm:' + result);
-                cm.value = result;
-                opcm.innerText = "CM:" + result;
-                opinch.innerText = "inch:" + dstinch;
-            }
+            result = dstinch * 2.54;
+            console.log('inch->cm:' + result);
+            cm.value = result;
+            opcm.innerText = "CM:" + result;
+            opinch.innerText = "inch:" + dstinch;
         })
     </script>
 </body>
