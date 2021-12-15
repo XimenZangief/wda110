@@ -1,0 +1,71 @@
+<!-- 
+input 
+公分
+
+2. demo Result 
+公寸
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 2021/12/15</title>
+</head>
+
+<body>
+    <h1>JS 2021/12/15</h1>
+    <form action="" id="myForm">
+        <input type="text" id="cm" placeholder="CM">CM<br>
+        <input type="text" id="inch" placeholder="INCH">INCH<br>
+        <!-- <input type="submit" value="SUBMIT"> -->
+    </form>
+    <ul>
+        <li id="opcm"> CM:</li>
+        <li id="opinch"> inch:</li>
+    </ul>
+
+    <script>
+        const form = document.getElementById("myForm");
+        const cm = document.getElementById("cm");
+        const inch = document.getElementById("inch");
+
+
+
+        cm.addEventListener("change", function (e) {
+            //如果cm不是空值或怪怪的東西，則cm->inch
+            //CM
+            dstcm = parseFloat(cm.value);
+            console.log(dstcm);
+            dstinch = parseFloat(inch.value);
+            console.log(dstinch);
+            if (typeof (dstcm) != NaN || dstcm != "undefined") {
+                result = dstcm * 0.39;
+                console.log('cm->inch:' + result);
+                inch.value = result;
+                opcm.innerText = "CM:" + dstcm;
+                opinch.innerText = "inch:" + result;
+            }
+        })
+        inch.addEventListener("change", function (e) {
+            //如果inch不是空值或怪怪的東西，則inch->cm
+            //inch
+            dstcm = parseFloat(cm.value);
+            console.log(dstcm);
+            dstinch = parseFloat(inch.value);
+            console.log(dstinch);
+            if (typeof (dstinch) != NaN || dstinch != "undefined") {
+                result = dstinch * 2.54;
+                console.log('inch->cm:' + result);
+                cm.value = result;
+                opcm.innerText = "CM:" + result;
+                opinch.innerText = "inch:" + dstinch;
+            }
+        })
+    </script>
+</body>
+
+</html>

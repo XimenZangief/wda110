@@ -1,0 +1,88 @@
+<!-- 
+input 
+1.1 總價
+1.2 折扣 spend > 500 *0.8
+1.3 現金折抵 >200 1~100  
+
+2. demo Result 
+原價:1000
+折扣:
+現金折抵:
+總共省:
+本次付款總價:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 2021/12/15</title>
+</head>
+
+<body>
+    <h1>JS 2021/12/15</h1>
+    <form action="" id="myForm">
+        <input type="text" id="total" placeholder="總價">總價<br>
+        <input type="text" id="off" placeholder="折扣">折扣<br>
+        <input type="text" id="reduce" placeholder="現金折抵">現金折抵<br>
+        <input type="submit" value="SUBMIT">
+    </form>
+    <ul>
+        <li id="optotal"> 原價:</li>
+        <li id="opoff"> 折扣:</li>
+        <li id="opreduce"> 現金折抵:</li>
+        <li id="output"> 總共省:</li>
+    </ul>
+
+    <script>
+        const form = document.getElementById("myForm");
+        const total = document.getElementById("total");
+        const off = document.getElementById("off");
+        const reduce = document.getElementById("reduce");
+        const output = document.getElementById("output");
+
+        form.addEventListener("submit", function (e) {
+            console.log(e);
+            e.preventDefault();
+            console.log(total.value);
+            console.log(off.value);
+            console.log(reduce.value);
+
+            //總價
+            dstTotal = parseInt(total.value);
+            console.log(dstTotal);
+
+            //折扣
+            dstOff = parseFloat(off.value / 100);
+            console.log(dstOff);
+
+            //折抵
+            dstReduce = parseInt(reduce.value);
+            console.log(dstReduce);
+
+            //總共折多少
+            let all = 0;
+
+            // 超過500打79折
+            if (dstTotal > 500) {
+                all = dstTotal * (1 - dstOff);
+            }
+            // 超過兩百折抵
+            if (dstTotal > 200) {
+                all += dstReduce;
+            }
+            
+            optotal.innerText = "原價：" + dstTotal;
+            opoff.innerText = "打 " + (dstOff*10) + " 折";
+            opreduce.innerText = "現金折抵" + dstReduce;
+            output.innerText = "總共省了" + Math.round(all);
+        }
+
+        )
+    </script>
+</body>
+
+</html>
