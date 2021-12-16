@@ -1,0 +1,55 @@
+<!--
+JS　20211216 上課練習 
+1.input 
+    1.1 國文成績
+    1.2 英文成績
+    1.3 數學成績
+2.result
+    2.1 國/英/數成績
+    2.2 總分
+    2.3 平均
+    2.4 評級 ABCDE  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1216 JS</title>
+</head>
+
+<body>
+    <h1>JS1216成績判斷</h1>
+    <form action="" id="myForm">
+        <input type="text" name="" id="china" placeholder="國文">國文<br>
+        <input type="text" name="" id="eng" placeholder="英文">英文<br>
+        <input type="text" name="" id="math" placeholder="數學">數學<br>
+    </form>
+    <div class="container">
+        <ul>
+            <li id="opChina">國文等級:</li>
+            <li id="opEng">英文等級:</li>
+            <li id="opMath">數學等級:</li>
+        </ul>
+    </div>
+    <script>
+        const myForm=document.getElementById("myForm");
+        const china=document.getElementById("china");
+        const eng=document.getElementById("eng");
+        const math=document.getElementById("math");
+
+        input.addEventListener("china",function(e){
+            dstChina = parseInt(china.value);
+            console.log(dstChina);
+            dstEng = parseInt(eng.value);
+            console.log(dstEng);
+            dstMath = parseInt(math.value);
+            console.log=(dstMath);
+        })
+    </script>
+</body>
+
+</html>
