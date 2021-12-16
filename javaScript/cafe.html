@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1216 JS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <h1 class="text-primary">JS1216咖啡</h1>
+    <form action="" id="myForm">
+        <!-- 指定價位範圍 -->
+        咖啡 10  <input type="number" min="0" id="n1" placeholder="數量" value="0"><br>
+        花茶 100 <input type="number" min="0" id="n2" placeholder="數量" value="0"><br>
+        珍奶 1000<input type="number" min="0" id="n3" placeholder="數量" value="0"><br>   
+        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+        <button type="reset" class="btn btn-info" id="reset">Reset</button>
+    </form>
+    <div class="container alert-info" id="result">
+        <li>咖啡:</li>
+        <li>花茶:</li>
+        <li>珍奶:</li>
+        <li>總共:</li>
+        <li>總價:</li>
+    </div>
+    <script>
+        //清空result區塊
+        result.innerHTML="";
+        const myForm = document.getElementById("myForm");
+        const n1 = document.getElementById("n1");
+        const n2 = document.getElementById("n2");
+        const n3 = document.getElementById("n3");
+        const submit = document.getElementById("submit");
+        const reset = document.getElementById("reset");
+
+        submit.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            //確認是否送出，否則不做事
+            if(!confirm("submit ?")){
+                return false;
+            }
+            const dstN1 = parseInt(n1.value);
+            const dstN2 = parseInt(n2.value);
+            const dstN3 = parseInt(n3.value);
+
+            let sum = dstN1 + dstN2 + dstN3;
+            console.log(typeof (sum));
+            console.log(sum); //會顯示藍字
+            //由於round只會做到整數位，故先給予加成再除回來
+            let total = dstN1*10+dstN2*100+dstN3*1000;
+            console.log("total", total); //會顯示藍字
+
+            const result= document.getElementById("result");
+            console.log(typeof(result));
+            result.innerHTML =
+                "<li>咖啡:" + dstN1 + "</li>" +
+                "<li>花茶:" + dstN2 + "</li>" +
+                "<li>珍奶:" + dstN3 + "</li>" +
+                "<li>總共:" + sum + "杯</li>" +
+                "<li>總價:" + total + "</li>" ;
+        })
+        reset.addEventListener("click", function (e) {
+            e.preventDefault();
+            n1.value=0;
+            n2.value=0;
+            n3.value=0;
+            result.innerHTML="";
+        })
+    </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

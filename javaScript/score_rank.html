@@ -30,6 +30,7 @@ JS　20211216 上課練習
         英文<input type="number" min="0" max="100" id="eng" placeholder="英文"><br>
         數學<input type="number" min="0" max="100" id="math" placeholder="數學"><br>
         <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+        <button type="reset" class="btn btn-info" id="reset">Reset</button>
     </form>
     <div class="container alert-info" id="result">
         <li>國文:</li>
@@ -40,14 +41,22 @@ JS　20211216 上課練習
         <li>級別:</li>
     </div>
     <script>
+        //清空result區塊
+        result.innerHTML="";
         const myForm = document.getElementById("myForm");
         const china = document.getElementById("china");
         const eng = document.getElementById("eng");
         const math = document.getElementById("math");
         const submit = document.getElementById("submit");
+        const reset = document.getElementById("reset");
 
         submit.addEventListener("click", function (e) {
             e.preventDefault();
+
+            //確認是否送出，否則不做事
+            if(!confirm("submit ?")){
+                return false;
+            }
 
             console.log(china.value);
             console.log(eng.value);
@@ -90,6 +99,13 @@ JS　20211216 上課練習
                 "<li>總分:" + sum + "</li>" +
                 "<li>平均:" + avg + "</li>" +
                 "<li class='text-" + color + "'>級別:" + level + "</li>";
+        })
+        reset.addEventListener("click", function (e) {
+            e.preventDefault();
+            china.value=0;
+            eng.value=0;
+            math.value=0;
+            result.innerHTML="";
         })
     </script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
