@@ -19,37 +19,82 @@ JS　20211216 上課練習
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1216 JS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
-    <h1>JS1216成績判斷</h1>
+    <h1 class="text-primary">JS1216成績判斷</h1>
     <form action="" id="myForm">
-        <input type="text" name="" id="china" placeholder="國文">國文<br>
-        <input type="text" name="" id="eng" placeholder="英文">英文<br>
-        <input type="text" name="" id="math" placeholder="數學">數學<br>
+        <!-- 指定成績範圍 -->
+        國文<input type="number" min="0" max="100" id="china" placeholder="國文"><br>
+        英文<input type="number" min="0" max="100" id="eng" placeholder="英文"><br>
+        數學<input type="number" min="0" max="100" id="math" placeholder="數學"><br>
+        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
     </form>
-    <div class="container">
-        <ul>
-            <li id="opChina">國文等級:</li>
-            <li id="opEng">英文等級:</li>
-            <li id="opMath">數學等級:</li>
-        </ul>
+    <div class="container alert-info" id="result">
+        <li>國文:</li>
+        <li>英文:</li>
+        <li>數學:</li>
+        <li>總分:</li>
+        <li>平均:</li>
+        <li>級別:</li>
     </div>
     <script>
-        const myForm=document.getElementById("myForm");
-        const china=document.getElementById("china");
-        const eng=document.getElementById("eng");
-        const math=document.getElementById("math");
+        const myForm = document.getElementById("myForm");
+        const china = document.getElementById("china");
+        const eng = document.getElementById("eng");
+        const math = document.getElementById("math");
+        const submit = document.getElementById("submit");
 
-        input.addEventListener("china",function(e){
-            dstChina = parseInt(china.value);
-            console.log(dstChina);
-            dstEng = parseInt(eng.value);
-            console.log(dstEng);
-            dstMath = parseInt(math.value);
-            console.log=(dstMath);
+        submit.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            console.log(china.value);
+            console.log(eng.value);
+            console.log(math.value);
+            const dstChina = parseInt(china.value);
+            const dstEng = parseInt(eng.value);
+            const dstMath = parseInt(math.value);
+
+            let sum = dstChina + dstEng + dstMath;
+            console.log(typeof (sum));
+            console.log(sum); //會顯示藍字
+            //由於round只會做到整數位，故先給予加成再除回來
+            let avg = Math.round(sum / 3 * 100) / 100;
+            console.log("AVG", avg); //會顯示藍字
+
+            let level;
+            let color = "secondary";
+            if (avg >= 90) {
+                level = "A";
+                color = "primary";
+            } else if (avg >= 80) {
+                level = "B";
+            } else if (avg >= 70) {
+                level = "C";
+            } else if (avg >= 60) {
+                level = "D";
+            } else {
+                level = "E";
+                color = "danger";
+            }
+            console.log("level", level);
+            console.log("color", color);
+
+            const result= document.getElementById("result");
+            console.log(typeof(result));
+            result.innerHTML =
+                "<li>國文:" + dstChina + "</li>" +
+                "<li>英文:" + dstEng + "</li>" +
+                "<li>數學:" + dstMath + "</li>" +
+                "<li>總分:" + sum + "</li>" +
+                "<li>平均:" + avg + "</li>" +
+                "<li class='text-" + color + "'>級別:" + level + "</li>";
         })
     </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
